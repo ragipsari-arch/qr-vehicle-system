@@ -1,0 +1,118 @@
+{
+  "users": [
+    {
+      "id": "admin-uuid-0000-0000-000000000000",
+      "email": "admin@qrvehicle.com",
+      "phone": "+905555555555",
+      "password_hash": "$2a$10$wf43IUzh3I684DHWbiHxqOUmf0300zahniX2OAW/A6wHI7V/ti3GW",
+      "role": "admin",
+      "plan": "premium",
+      "is_phone_verified": 1,
+      "is_email_verified": 1,
+      "created_at": "2026-05-30T12:41:08.204Z",
+      "updated_at": "2026-05-30T12:41:08.205Z"
+    },
+    {
+      "id": "u-ksc631zp6qcjq2k3ktcyq",
+      "email": "ragipsari@gmail.com",
+      "phone": "+994773219181",
+      "password_hash": "$2a$10$.9daVqGMg6laVSmdc/IjgObFaD0y89ftZofesMwatS3nR/yTqhnDC",
+      "role": "user",
+      "plan": "premium",
+      "is_phone_verified": 1,
+      "is_email_verified": 0,
+      "created_at": "2026-05-30T12:45:47.721Z",
+      "updated_at": "2026-05-30T12:45:47.721Z"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "v-li3mzalednh",
+      "user_id": "u-ksc631zp6qcjq2k3ktcyq",
+      "plate": "77 AA 123",
+      "brand": "TESLA",
+      "model": "MODEL 3",
+      "color": "BEYAZ ",
+      "country": "Azerbaijan",
+      "qr_uuid": "qr-wcb69pqq-6nw44dfi",
+      "created_at": "2026-05-30T13:24:40.982Z",
+      "updated_at": "2026-05-30T13:24:40.982Z"
+    }
+  ],
+  "notification_settings": [
+    {
+      "id": "settings-admin-uuid",
+      "user_id": "admin-uuid-0000-0000-000000000000",
+      "whatsapp_enabled": 1,
+      "telegram_enabled": 1,
+      "sms_enabled": 1,
+      "push_enabled": 1,
+      "email_enabled": 1,
+      "telegram_chat_id": null,
+      "created_at": "2026-05-30T12:41:08.205Z",
+      "updated_at": "2026-05-30T12:41:08.205Z"
+    },
+    {
+      "id": "ns-k7cgmx4obda",
+      "user_id": "u-ksc631zp6qcjq2k3ktcyq",
+      "whatsapp_enabled": 0,
+      "telegram_enabled": 0,
+      "sms_enabled": 0,
+      "push_enabled": 0,
+      "email_enabled": 1,
+      "telegram_chat_id": null,
+      "created_at": "2026-05-30T12:45:47.721Z",
+      "updated_at": "2026-05-30T12:45:47.721Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-1c09jfwqhc9",
+      "vehicle_id": "v-yp55i22dvm",
+      "category": "incorrect_park",
+      "sub_category": "road_blocked",
+      "custom_text": null,
+      "location_lat": null,
+      "location_lng": null,
+      "sender_ip": "::1",
+      "status": "sent",
+      "created_at": "2026-05-30T13:02:03.726Z"
+    },
+    {
+      "id": "msg-n231cithujk",
+      "vehicle_id": "v-yp55i22dvm",
+      "category": "emergency",
+      "sub_category": "fire_engine",
+      "custom_text": null,
+      "location_lat": null,
+      "location_lng": null,
+      "sender_ip": "::1",
+      "status": "sent",
+      "created_at": "2026-05-30T13:12:42.189Z"
+    },
+    {
+      "id": "msg-hfycub160tr",
+      "vehicle_id": "v-li3mzalednh",
+      "category": "emergency",
+      "sub_category": "fire_engine",
+      "custom_text": null,
+      "location_lat": null,
+      "location_lng": null,
+      "sender_ip": "::1",
+      "status": "sent",
+      "created_at": "2026-05-30T13:27:51.331Z"
+    }
+  ],
+  "verification_codes": [
+    {
+      "id": "otp-nae1lyt27fk",
+      "user_id": "u-ksc631zp6qcjq2k3ktcyq",
+      "type": "phone_otp",
+      "code": "679939",
+      "expires_at": "2026-05-30T12:55:47.721Z",
+      "is_used": 1,
+      "created_at": "2026-05-30T12:45:47.721Z"
+    }
+  ],
+  "abuse_reports": []
+}

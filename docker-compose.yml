@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: qr-vehicle-db
+    restart: always
+    environment:
+      POSTGRES_USER: qr_user
+      POSTGRES_PASSWORD: qr_secure_password_987
+      POSTGRES_DB: qr_vehicle_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    container_name: qr-vehicle-backend
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - DATABASE_URL=postgres://qr_user:qr_secure_password_987@db:5432/qr_vehicle_db
+      - JWT_SECRET=qr-vehicle-system-jwt-production-secret-999
+      - TELEGRAM_BOT_TOKEN=
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    container_name: qr-vehicle-frontend
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
