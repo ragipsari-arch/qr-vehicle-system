@@ -40,4 +40,11 @@ app.get('/api/vehicles', (req, res) => {
     res.json([]);
 });
 
+// Port dinleme (Render için gerekli)
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
+
+// Export etme (gerekli değil ama kalabilir)
 module.exports = app;
